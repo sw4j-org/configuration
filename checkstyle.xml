@@ -71,7 +71,6 @@
     </module>
     <module name="LeftCurly">
       <property name="severity" value="warning"/>
-      <property name="ignoreEnums" value="false"/>
     </module>
     <module name="NeedBraces">
       <property name="severity" value="error"/>
@@ -415,7 +414,7 @@
       <property name="caseIndent" value="4"/>
       <property name="throwsIndent" value="0"/>
       <property name="arrayInitIndent" value="4"/>
-      <property name="lineWrappingIndentation" value="8"/>
+      <property name="lineWrappingIndentation" value="0"/>
       <property name="forceStrictCondition" value="true"/>
     </module>
     <module name="TrailingComment">
@@ -497,6 +496,7 @@
     </module>
     <module name="LineLength">
       <property name="severity" value="warning"/>
+      <property name="max" value="120"/>
       <property name="ignorePattern" value="^import .*$"/>
     </module>
     <module name="MethodLength">
@@ -562,16 +562,17 @@
     </module>
     <module name="EmptyLineSeparator">
       <property name="severity" value="warning"/>
+      <property name="tokens" value="IMPORT,CLASS_DEF,ENUM_DEF,INTERFACE_DEF,CTOR_DEF,METHOD_DEF,STATIC_INIT,INSTANCE_INIT,VARIABLE_DEF"/>
     </module>
     <module name="SeparatorWrap">
       <property name="severity" value="warning"/>
       <property name="option" value="eol"/>
-      <property name="tokens" value="COMMA,SEMI,ELLIPSIS,AT,LPAREN,RPAREN,ARRAY_DECLARATOR"/>
+      <property name="tokens" value="COMMA,SEMI,ELLIPSIS,LPAREN,RPAREN,ARRAY_DECLARATOR"/>
     </module>
     <module name="SeparatorWrap">
       <property name="severity" value="warning"/>
       <property name="option" value="nl"/>
-      <property name="tokens" value="DOT,RBRACK"/>
+      <property name="tokens" value="DOT,AT,RBRACK"/>
     </module>
 
   </module>

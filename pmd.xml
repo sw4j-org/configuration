@@ -4,10 +4,10 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
   <description>This is the PMD ruleset for sw4j.org</description>
-<!--<rule ref="rulesets/java/strictexception.xml/AvoidLosingExceptionInformation">
+<rule ref="rulesets/java/strictexception.xml/AvoidLosingExceptionInformation">
 <priority>3</priority>
 </rule>
-<rule ref="rulesets/java/design.xml/UnsynchronizedStaticDateFormatter">
+<!--<rule ref="rulesets/java/design.xml/UnsynchronizedStaticDateFormatter">
 <priority>3</priority>
 </rule>
 <rule ref="rulesets/java/j2ee.xml/MDBAndSessionBeanNamingConvention">

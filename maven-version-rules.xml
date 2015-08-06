@@ -1,0 +1,18 @@
+<ruleset xmlns="http://mojo.codehaus.org/versions-maven-plugin/rule/2.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    comparisonMethod="maven"
+    xsi:schemaLocation="http://mojo.codehaus.org/versions-maven-plugin/rule/2.0.0 http://www.mojohaus.org/versions-maven-plugin/xsd/rule-2.0.0.xsd">
+  <ignoreVersions>
+    <ignoreVersion type="regex">.*-alpha.*</ignoreVersion>
+    <ignoreVersion type="regex">.*-beta.*</ignoreVersion>
+  </ignoreVersions>
+  <rules>
+    <rule groupId="org.jacoco" artifactId="jacoco-maven-plugin" comparisonMethod="maven">
+    <!-- This version has incompatibilities in the generated file and does not work with jenkins -->
+      <ignoreVersions>
+        <ignoreVersion>0.7.5.201505241946</ignoreVersion>
+      </ignoreVersions>
+    </rule>
+  </rules>
+</ruleset>
+

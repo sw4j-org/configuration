@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <FindBugsFilter>
+  <Match>
+    <Bug pattern="BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS"/>
+  </Match>
+  <Match>
+    <Bug pattern="BIT_SIGNED_CHECK"/>
+  </Match>
+
 <Match>
 <Bug pattern="ML_SYNC_ON_FIELD_TO_GUARD_CHANGING_THAT_FIELD"/>
 </Match>
@@ -56,9 +63,6 @@
 </Match>
 <Match>
 <Bug pattern="SE_PRIVATE_READ_RESOLVE_NOT_INHERITED"/>
-</Match>
-<Match>
-<Bug pattern="BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS"/>
 </Match>
 <Match>
 <Bug pattern="NP_METHOD_PARAMETER_TIGHTENS_ANNOTATION"/>
@@ -803,9 +807,6 @@
 </Match>
 <Match>
 <Bug pattern="AM_CREATES_EMPTY_ZIP_FILE_ENTRY"/>
-</Match>
-<Match>
-<Bug pattern="BIT_SIGNED_CHECK"/>
 </Match>
 <Match>
 <Bug pattern="NS_NON_SHORT_CIRCUIT"/>

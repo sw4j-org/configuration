@@ -8,4 +8,3 @@ This configuration contains files for
 * pmd
 * OWASP dependecy check
 * versions plugin
-

@@ -7,10 +7,10 @@
     <ignoreVersion type="regex">.*-beta.*</ignoreVersion>
   </ignoreVersions>
   <rules>
-    <rule groupId="org.jacoco" artifactId="jacoco-maven-plugin" comparisonMethod="maven">
-    <!-- This version has incompatibilities in the generated file and does not work with jenkins -->
+    <rule groupId="org.apache.maven.doxia" artifactId="doxia-module-markdown" comparisonMethod="maven">
       <ignoreVersions>
-        <ignoreVersion>0.7.5.201505241946</ignoreVersion>
+        <!-- This version needs the maven-site-plugin 3.5 which is not yet released -->
+        <ignoreVersion>1.7</ignoreVersion>
       </ignoreVersions>
     </rule>
   </rules>

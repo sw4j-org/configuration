@@ -5,6 +5,7 @@
   <ignoreVersions>
     <ignoreVersion type="regex">.*-alpha.*</ignoreVersion>
     <ignoreVersion type="regex">.*-beta.*</ignoreVersion>
+    <ignoreVersion type="regex">.*\.Draft.*</ignoreVersion>
   </ignoreVersions>
   <rules>
     <rule groupId="org.apache.maven.doxia" artifactId="doxia-module-markdown" comparisonMethod="maven">

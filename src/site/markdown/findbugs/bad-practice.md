@@ -1,4 +1,4 @@
-# sw4j.org Findbugs Configuration
+# sw4j.org Findbugs Quality Profile
 
 * [BC: Equals method should not assume anything about the type of its argument]()
 

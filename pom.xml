@@ -5,19 +5,19 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.sw4j</groupId>
-  <artifactId>configuration</artifactId>
+  <artifactId>quality-profile</artifactId>
   <version>0.1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <name>sw4j.org Configuration</name>
+  <name>sw4j.org Quality Profile</name>
 
-  <description>The plugin configuration for sw4j.org projects.</description>
+  <description>The quality profile (settings for build plugins) for sw4j.org projects.</description>
 
-  <url>https://sw4j-org.github.io/configuration/</url>
+  <url>https://sw4j-org.github.io/quality-profile/</url>
 
   <issueManagement>
     <system>GitHub</system>
-    <url>https://github.com/sw4j-org/configuration/issues/</url>
+    <url>https://github.com/sw4j-org/quality-profile/issues/</url>
   </issueManagement>
 
   <developers>
@@ -120,14 +120,14 @@
   </reporting>
 
   <scm>
-    <developerConnection>scm:git:ssh://git@github.com:sw4j-org/configuration.git</developerConnection>
-    <url>https://github.com/sw4j-org/configuration</url>
+    <developerConnection>scm:git:ssh://git@github.com:sw4j-org/quality-profile.git</developerConnection>
+    <url>https://github.com/sw4j-org/quality-profile</url>
   </scm>
 
   <distributionManagement>
     <site>
       <id>github</id>
-      <url>scm:git:https://github.com/sw4j-org/configuration.git</url>
+      <url>scm:git:https://github.com/sw4j-org/quality-profile.git</url>
     </site>
   </distributionManagement>
 

@@ -119,6 +119,45 @@
     </plugins>
   </reporting>
 
+  <profiles>
+    <profile>
+      <id>release</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <version>3.0.2</version>
+            <executions>
+              <execution>
+                <id>create-javadoc</id>
+                <phase>package</phase>
+                <goals>
+                  <goal>jar</goal>
+                </goals>
+                <configuration>
+                  <classifier>javadoc</classifier>
+                  <classesDirectory>${basedir}/src/main/javadoc</classesDirectory>
+                </configuration>
+              </execution>
+              <execution>
+                <id>create-javasrc</id>
+                <phase>package</phase>
+                <goals>
+                  <goal>jar</goal>
+                </goals>
+                <configuration>
+                  <classifier>sources</classifier>
+                  <classesDirectory>${basedir}/src/main/javasrc</classesDirectory>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+
   <scm>
     <developerConnection>scm:git:ssh://git@github.com:sw4j-org/quality-profile.git</developerConnection>
     <url>https://github.com/sw4j-org/quality-profile</url>

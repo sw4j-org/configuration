@@ -37,6 +37,13 @@ pipeline {
                                 mavenLocalRepo: '${JENKINS_HOME}/maven-repositories/${EXECUTOR_NUMBER}/') {
                             sh "mvn -Dscmpublish.skipCheckin=true post-site scm-publish:publish-scm"
                         }
+                        withCredentials([string(credentialsId: "${TOKEN}", variable: 'GH_TOKEN')]) {
+                            sh """
+                                cd target/scmpublish-checkout
+                                git commit -a -m 'Automatic created documentation'
+                                git push -fq https://${GH_TOKEN}@github.com/sw4j-org/sandbox.git gh-pages:gh-pages
+                            """
+                        }
                     }
                 }
             }

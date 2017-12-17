@@ -1,4 +1,4 @@
-# sw4j.org Findbugs Configuration
+# sw4j.org Findbugs Quality Profile
 
 This is the explanation of the FindBugs configuration used for sw4j.org projects.
 

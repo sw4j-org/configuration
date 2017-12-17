@@ -30,6 +30,15 @@ pipeline {
                         }
                     }
                 }
+                stage('Create Site') {
+                    steps {
+                        withMaven(jdk: 'Current JDK 8',
+                                maven: 'Current Maven 3',
+                                mavenLocalRepo: '${JENKINS_HOME}/maven-repositories/${EXECUTOR_NUMBER}/') {
+                            sh "mvn -Dscmpublish.skipCheckin=true post-site scm-publish:publish-scm"
+                        }
+                    }
+                }
             }
         }
     }

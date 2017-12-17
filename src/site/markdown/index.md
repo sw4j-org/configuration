@@ -1,3 +1,3 @@
-# sw4j.org Configuration
+# sw4j.org Quality Profile
 
-This is the common configuration for sw4j.org projects.
+This is the quality profile for sw4j.org projects.

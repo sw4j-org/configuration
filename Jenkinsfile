@@ -37,7 +37,7 @@ pipeline {
                                 mavenLocalRepo: '${JENKINS_HOME}/maven-repositories/${EXECUTOR_NUMBER}/') {
                             sh "mvn -Dscmpublish.skipCheckin=true post-site scm-publish:publish-scm"
                         }
-                        withCredentials([string(credentialsId: "${TOKEN}", variable: 'GH_TOKEN')]) {
+                        withCredentials([string(credentialsId: "f9c0bd13-de91-4d90-a292-8fd2d05c26b0", variable: 'GH_TOKEN')]) {
                             sh """
                                 cd target/scmpublish-checkout
                                 git commit -a -m 'Automatic created documentation'

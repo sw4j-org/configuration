@@ -42,7 +42,7 @@ pipeline {
                             sh """
                                 cd target/scmpublish-checkout
                                 git commit -a -m 'Automatic created documentation'
-                                git push -fq https://${GH_TOKEN}@github.com/sw4j-org/sandbox.git gh-pages:gh-pages
+                                git push -fq https://${GH_TOKEN}@github.com/sw4j-org/quality-profile.git gh-pages:gh-pages
                             """
                         }
                     }

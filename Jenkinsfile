@@ -10,12 +10,14 @@ pipeline {
             steps {
                 withMaven(jdk: 'Current JDK 8',
                         maven: 'Current Maven 3',
-                        mavenLocalRepo: '${JENKINS_HOME}/maven-repositories/${EXECUTOR_NUMBER}/') {
+                        mavenLocalRepo: '${JENKINS_HOME}/maven-repositories/${EXECUTOR_NUMBER}/',
+                        globalMavenSettingsConfig: '9a4daf6d-06dd-434a-83cc-9ba9bd2326fc') {
                     sh "mvn clean install"
                 }
             }
         }
         stage('Document and Deploy') {
+            // run this stage only when on master in the original repository
             when {
                 environment name: 'CHANGE_FORK', value: ''
                 expression { GIT_URL ==~ 'https://github.com/sw4j-org/.*' }
@@ -26,7 +28,7 @@ pipeline {
                         withMaven(jdk: 'Current JDK 8',
                                 maven: 'Current Maven 3',
                                 mavenLocalRepo: '${JENKINS_HOME}/maven-repositories/${EXECUTOR_NUMBER}/',
-                                globalMavenSettingsConfig: '9a4daf6d-06dd-434a-83cc-9ba9bd2326fc') {
+                                globalMavenSettingsConfig: '03c863c2-c19c-4ed5-bc3a-7650b8f73ecf') {
                             sh "mvn deploy"
                         }
                     }
@@ -35,7 +37,8 @@ pipeline {
                     steps {
                         withMaven(jdk: 'Current JDK 8',
                                 maven: 'Current Maven 3',
-                                mavenLocalRepo: '${JENKINS_HOME}/maven-repositories/${EXECUTOR_NUMBER}/') {
+                                mavenLocalRepo: '${JENKINS_HOME}/maven-repositories/${EXECUTOR_NUMBER}/',
+                                globalMavenSettingsConfig: '03c863c2-c19c-4ed5-bc3a-7650b8f73ecf') {
                             sh "mvn -Dscmpublish.skipCheckin=true post-site scm-publish:publish-scm"
                         }
                         withCredentials([string(credentialsId: "f9c0bd13-de91-4d90-a292-8fd2d05c26b0", variable: 'GH_TOKEN')]) {

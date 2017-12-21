@@ -8,12 +8,12 @@
     <ignoreVersion type="regex">.*\.Draft.*</ignoreVersion>
   </ignoreVersions>
   <rules>
-    <rule groupId="org.apache.maven.doxia" artifactId="doxia-module-markdown" comparisonMethod="maven">
-      <ignoreVersions>
+    <!--<rule groupId="org.apache.maven.doxia" artifactId="doxia-module-markdown" comparisonMethod="maven">
+      <ignoreVersions>-->
         <!-- This version needs the maven-site-plugin 3.5 which is not yet released -->
-        <ignoreVersion>1.7</ignoreVersion>
+        <!--<ignoreVersion>1.7</ignoreVersion>
       </ignoreVersions>
-    </rule>
+    </rule>-->
   </rules>
 </ruleset>
 

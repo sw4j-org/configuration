@@ -4,10 +4,50 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
   <description>This is the PMD ruleset for sw4j.org</description>
-<rule ref="rulesets/java/strictexception.xml/AvoidLosingExceptionInformation">
-<priority>3</priority>
-</rule>
-<!--<rule ref="rulesets/java/design.xml/UnsynchronizedStaticDateFormatter">
+  <rule ref="rulesets/java/design.xml/AbstractClassWithoutAbstractMethod">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/java/design.xml/AccessorClassGeneration">
+    <priority>3</priority>
+  </rule>
+  <rule ref="category/java/bestpractices.xml/AccessorMethodGeneration">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/java/sunsecure.xml/ArrayIsStoredDirectly">
+    <priority>2</priority>
+  </rule>
+  <rule ref="rulesets/java/logging-java.xml/AvoidPrintStackTrace">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/java/design.xml/AvoidReassigningParameters">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/java/strings.xml/AvoidStringBufferField">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/java/basic.xml/AvoidUsingHardCodedIP">
+    <priority>3</priority>
+    <properties>
+      <property name="pattern" value="^[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}$"/>
+    </properties>
+  </rule>
+  <rule ref="rulesets/java/basic.xml/CheckResultSet">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/java/design.xml/AvoidConstantsInterface">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/java/design.xml/DefaultLabelNotLastInSwitchStmt">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/java/logging-jakarta-commons.xml/GuardLogStatement">
+    <priority>3</priority>
+  </rule>
+
+  <rule ref="rulesets/java/strictexception.xml/AvoidLosingExceptionInformation">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/java/design.xml/UnsynchronizedStaticDateFormatter">
 <priority>3</priority>
 </rule>
 <rule ref="rulesets/java/j2ee.xml/MDBAndSessionBeanNamingConvention">
@@ -135,12 +175,6 @@
 </rule>
 <rule ref="rulesets/java/design.xml/ClassWithOnlyPrivateConstructorsShouldBeFinal">
 <priority>3</priority>
-</rule>
-<rule ref="rulesets/java/basic.xml/AvoidUsingHardCodedIP">
-<priority>3</priority>
-<properties>
-<property name="pattern" value="^[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}$"/>
-</properties>
 </rule>
 <rule ref="rulesets/java/basic.xml/DontUseFloatTypeForLoopIndices">
 <priority>3</priority>
@@ -382,9 +416,6 @@
 <rule ref="rulesets/java/naming.xml/SuspiciousHashcodeMethodName">
 <priority>3</priority>
 </rule>
-<rule ref="rulesets/java/logging-jakarta-commons.xml/GuardLogStatement">
-<priority>3</priority>
-</rule>
 <rule ref="rulesets/java/imports.xml/UnusedImports">
 <priority>5</priority>
 </rule>
@@ -482,9 +513,6 @@
 <property name="IgnoreJUnitCompletely" value="false"/>
 </properties>
 </rule>
-<rule ref="rulesets/java/strings.xml/AvoidStringBufferField">
-<priority>3</priority>
-</rule>
 <rule ref="rulesets/java/strings.xml/UselessStringValueOf">
 <priority>4</priority>
 </rule>
@@ -570,14 +598,8 @@
 <rule ref="rulesets/java/optimizations.xml/LocalVariableCouldBeFinal">
 <priority>4</priority>
 </rule>
-<rule ref="rulesets/java/design.xml/DefaultLabelNotLastInSwitchStmt">
-<priority>3</priority>
-</rule>
 <rule ref="rulesets/java/design.xml/SingularField">
 <priority>4</priority>
-</rule>
-<rule ref="rulesets/java/logging-java.xml/AvoidPrintStackTrace">
-<priority>3</priority>
 </rule>
 <rule ref="rulesets/java/strings.xml/UseIndexOfChar">
 <priority>3</priority>
@@ -678,17 +700,11 @@
 <rule ref="rulesets/java/basic.xml/ExtendsObject">
 <priority>4</priority>
 </rule>
-<rule ref="rulesets/java/design.xml/AccessorClassGeneration">
-<priority>3</priority>
-</rule>
 <rule ref="rulesets/java/codesize.xml/TooManyFields">
 <priority>3</priority>
 <properties>
 <property name="maxfields" value="15"/>
 </properties>
-</rule>
-<rule ref="rulesets/java/basic.xml/CheckResultSet">
-<priority>3</priority>
 </rule>
 <rule ref="rulesets/java/empty.xml/EmptyTryBlock">
 <priority>3</priority>
@@ -778,9 +794,6 @@
 <rule ref="rulesets/java/naming.xml/NoPackage">
 <priority>3</priority>
 </rule>
-<rule ref="rulesets/java/design.xml/AbstractClassWithoutAbstractMethod">
-<priority>3</priority>
-</rule>
 <rule ref="rulesets/java/design.xml/UncommentedEmptyConstructor">
 <priority>3</priority>
 <properties>
@@ -809,9 +822,6 @@
 </properties>
 </rule>
 <rule ref="rulesets/java/strictexception.xml/AvoidRethrowingException">
-<priority>3</priority>
-</rule>
-<rule ref="rulesets/java/design.xml/AvoidConstantsInterface">
 <priority>3</priority>
 </rule>
 <rule ref="rulesets/java/unusedcode.xml/UnusedFormalParameter">
@@ -859,9 +869,6 @@
 <rule ref="rulesets/java/braces.xml/IfStmtsMustUseBraces">
 <priority>3</priority>
 </rule>
-<rule ref="rulesets/java/design.xml/AvoidReassigningParameters">
-<priority>3</priority>
-</rule>
 <rule ref="rulesets/java/design.xml/CloseResource">
 <priority>2</priority>
 <properties>
@@ -886,5 +893,5 @@
 </rule>
 <rule ref="rulesets/java/naming.xml/PackageCase">
 <priority>3</priority>
-</rule>-->
+</rule>
 </ruleset>

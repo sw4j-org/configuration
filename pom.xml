@@ -88,6 +88,11 @@
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-project-info-reports-plugin</artifactId>
+          <version>${project-info-reports-plugin-version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-scm-publish-plugin</artifactId>
           <version>${scm-publish-plugin-version}</version>
         </plugin>
@@ -105,7 +110,6 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-project-info-reports-plugin</artifactId>
-        <version>${project-info-reports-plugin-version}</version>
         <configuration>
           <dependencyLocationsEnabled>false</dependencyLocationsEnabled>
           <dependencyDetailsEnabled>false</dependencyDetailsEnabled>
@@ -200,7 +204,7 @@
     </snapshotRepository>
     <site>
       <id>github</id>
-      <url>scm:git:https://github.com/sw4j-org/quality-profile.git</url>
+      <url>scm:git:git@github.com:sw4j-org/quality-profile.git</url>
     </site>
   </distributionManagement>
 

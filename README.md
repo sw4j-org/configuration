@@ -1,10 +1,4 @@
-# sw4j.org build configuration
+# #movetogitlab
 
-This is the build configuration data for sw4j.org projects.
-
-This configuration contains files for
-* findbugs
-* checkstyle
-* pmd
-* OWASP dependecy check
-* versions plugin
+This repository is moved to https://git.sw4j.net/sw4j-org/quality-profile with a mirror at
+https://gitlab.com/sw4j-org/quality-profile
